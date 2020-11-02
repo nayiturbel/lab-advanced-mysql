@@ -9,7 +9,7 @@ GROUP BY 'Title ID', 'AUTHOR ID', 'Royalty for each sale'
 ORDER BY 'Title ID';
 
  CREATE TEMPORARY TABLE Profit_title
- SELECT Profit_sale.title_id, Profit_sale.au_id, SUM(PROFIT_SALE.Profit) AS 'Title_Profit'
+ SELECT Profit_sale.title_id, Profit_sale.au_id, SUM(Profit_sale.Profit) AS 'Title_Profit'
  FROM Profit_sale
  GROUP BY Profit_sale.title_id, Profit_sale.au_id;
 
